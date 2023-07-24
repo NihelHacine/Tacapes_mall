@@ -1,0 +1,114 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.dashboard_admin {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.dashboard_admin .sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: black;
+  padding: 15px;
+  z-index: 99;
+}
+.dashboard_admin .logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.dashboard_admin .sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.dashboard_admin .menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.dashboard_admin .menu-content::-webkit-scrollbar {
+  display: none;
+}
+.dashboard_admin .menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.dashboard_admin .submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.dashboard_admin .menu-title {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.dashboard_admin .item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.dashboard_admin .item i {
+  font-size: 12px;
+}
+.dashboard_admin .item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.dashboard_admin .submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.dashboard_admin .submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: black;
+  display: none;
+}
+.dashboard_admin .show-submenu ~ .submenu {
+  display: block;
+}
+.dashboard_admin .submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.dashboard_admin .submenu .menu-title i {
+  margin-right: 10px;
+}
+.dashboard_admin .navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.dashboard_admin .sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.dashboard_admin .navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: deeppink;
+  cursor: pointer;
+ 
+}
+.dashboard_admin .navbar #sidebar-close {
+  cursor: pointer;
+}
